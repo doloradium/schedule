@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    display: inline-block;
+    border: none;
+    padding: 10px 15px;
+    background-color: #011627;
+    color: #E9F2F9;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.large {
+    padding: 15px 25px;
+    font-size: 14px;
+}
+
+.small {
+    padding: 7px 10px;
+    font-size: 14px;
+}
+
+.icon {
+    margin-right: 1em;
+}
+
+.resetMarginRight {
+    margin-right: 0;
+}

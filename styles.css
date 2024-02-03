@@ -1,0 +1,59 @@
+.card {
+    height: 500px;
+    width: 350px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__picture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.card__info {
+    position: absolute;
+    bottom: 0;
+    background-color: #00000088;
+    width: calc(100% - 2em);
+    padding: 0.5em 1em;
+    font-family: 'Montserrat', semi-bold;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__heading {
+    font-size: 20px;
+
+}
+
+.card__rating {
+    background-color: rgb(255, 166, 0);
+    padding: 0.5em;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: 700;
+    height: fit-content;
+    margin: auto 0;
+}
+
+.card__subheading {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.card__price {
+    color: white;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    background-color: #00000088;
+    right: 0;
+    top: 30px;
+    padding: 0.5em;
+    font-family: 'Montserrat', semi-bold;
+    font-size: 20px;
+    font-weight: 700;
+}

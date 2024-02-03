@@ -1,0 +1,33 @@
+.menuList {
+    display: flex;
+    margin: 2em auto;
+    width: calc(100% - 2em);
+    max-width: 400px;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0 1em;
+    @media screen and (max-width: 950px) {
+        justify-content: center;
+        gap: 2em;
+    }
+}
+
+.menuItem {
+    list-style-type: none;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: .5s;
+    font-size: 1.25em;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+    color: #98D1FF;
+    transition: .5s;
+}

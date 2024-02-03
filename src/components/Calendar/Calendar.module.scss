@@ -1,0 +1,156 @@
+.wrapper {
+    width: calc(100% - 30px);
+    margin: 0 15px 15px;
+    position: relative;
+    @media screen and (max-width: 750px) {
+        width: calc(100% - 1em);
+        margin: 0.5em;
+    }
+}
+
+.h_grid {
+    display: flex;
+    position: relative;
+}
+
+.h_grid_bottom {
+    display: grid;
+    grid-template-columns: repeat(7, calc(100% / 7));
+    position: relative;
+    width: 100%;
+}
+
+.v_grid {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-around;
+    margin: 4em 0 0;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+}
+
+.hour {
+    display: block;
+    text-align: center;
+}
+
+.day_wrapper {
+    position: relative;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    &[data-today=true] {
+        background-color: #98D1FF;
+    }
+}
+
+.navigationParagraph {
+    margin: auto 0;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    width: calc(100% - 4em);
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 0 1em;
+    font-family: 'Montserrat', sans-serif;
+    @media screen and (max-width: 950px) {
+        flex-direction: column;
+        gap: 2em;
+    }
+    @media screen and (max-width: 450px) {
+        margin: 1em auto 2em;
+    }
+}
+
+.navigation {
+    height: fit-content;
+    margin: auto 0;
+    border: none;
+    background-color: #011627;
+    color: #E9F2F9;
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    transition: .5s;
+    width: 6em;
+    &:hover {
+        background-color: #E9F2F9;
+        color: #011627;
+        transition: .5s;
+        cursor: pointer;
+    }
+}
+
+.navigationBlock {
+    display: flex;
+    gap: 1em;
+    margin: auto;
+    &:first-child {
+        @media screen and (max-width: 950px) {
+            display: none;
+        }
+    }
+}
+
+.currentDate {
+    margin: 1em auto 0;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    font-weight: 900;
+    font-size: 1em;
+    height: 3em;
+    width: 3em;
+    line-height: 3;
+    border-radius: 100px;
+    &[data-today=true] {
+        background-color: #011627;
+        color: #E9F2F9;
+    }
+    @media screen and (max-width: 750px) {
+        margin: 0.5em auto 0;
+    }
+}
+
+.taleParagraph {
+    color: #E9F2F9;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.tableParagraphBold {
+    color: #E9F2F9;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.event {
+    position: relative;
+    width: calc(100% - 4em);
+    border-radius: 5px;
+    margin: 1em;
+    height: 8em;
+    padding: 0 1em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    @media screen and (max-width: 750px) {
+        width: calc(100% - 2em);
+        margin: 0.5em;
+        padding: 0 0.5em;
+    }
+}

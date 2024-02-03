@@ -1,0 +1,72 @@
+.container {
+    width: calc(100vw - 2em);
+    height: 100vh;
+    position: fixed;
+    background-color: #01162780;
+    top: 0;
+    display: none;
+    padding: 1em;
+}
+
+.content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #E9F2F9;
+    width: 100%;
+    max-width: 300px;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    padding: 2em;
+    border-radius: 5px;
+    display: none;
+    @media screen and (max-width: 500px) {
+        max-width: 200px;
+    }
+}
+
+.modalInput {
+    margin-bottom: 2em;
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    outline: none;
+    font-size: 1em;
+    @media screen and (max-width: 500px) {
+        margin-bottom: 1em;
+    }
+}
+
+.modalHeading {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto 2em;
+    @media screen and (max-width: 500px) {
+        margin: 0 auto 1em;
+    }
+}
+
+.modalLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    @media screen and (max-width: 500px) {
+        gap: 0.5em;
+    }
+}
+
+.modalForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    gap: 0.5em;
+}

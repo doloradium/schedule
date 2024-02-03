@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from 'react'
+import { Routes, Route } from 'react-router-dom'
+
+import { MarksList } from './components/MarksList/index'
+import { WeeklyCalendar } from './components/Calendar/index'
+import { Menu } from './components/Menu/index'
+import { ErrorBoundary } from './components/ErrorBoundary'
+
+import './App.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ErrorBoundary>
+      <div className='App'>
+        <header className='App-header'>
+          <Menu />
+          <Routes >
+            <Route path='/' element={<MarksList />} />
+            <Route path='support' element={<WeeklyCalendar />} />
+          </Routes>
+        </header>
+      </div>
+    </ErrorBoundary>
+  )
 }
 
-export default App;
+export default App 
