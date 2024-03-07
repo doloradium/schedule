@@ -5,6 +5,11 @@ import { Form } from './Form'
 
 import styles from './MarksList.module.scss'
 
+if (localStorage.getItem("marks") === null) {
+    let marks = []
+    localStorage.setItem('marks', JSON.stringify(marks))
+}
+
 export class MarksList extends React.Component {
     constructor(props) {
         super(props)
@@ -13,17 +18,14 @@ export class MarksList extends React.Component {
 
     addItem = mark => {
         const newList = [mark, ...JSON.parse(localStorage.getItem('marks'))]
-        this.setState({ marks: newList })
         localStorage.setItem('marks', JSON.stringify(newList))
-        console.log(JSON.parse(localStorage.getItem('marks')))
-        console.log(this.state.marks)
+        window.location.reload();
     }
 
     removeItem = id => {
         const newList = JSON.parse(localStorage.getItem('marks')).filter(item => id !== item.uid)
         this.setState({ marks: newList })
         localStorage.setItem('marks', JSON.stringify(newList))
-        // JSON.parse(localStorage.getItem('marks'))
     }
 
     render() {
