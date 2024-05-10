@@ -48,7 +48,7 @@ export class Modal1 extends React.Component {
 
     handleSubmit(e) {
         let parsedData = JSON.parse(localStorage.getItem('eventList'))
-        if (this.state.changes == false && (this.state.subject != '' || this.state.lecturer != '' || this.state.classroom != '')) {
+        if (this.state.changes == true && (this.state.subject != '' || this.state.lecturer != '' || this.state.classroom != '')) {
             parsedData.push({
                 year: this.state.year,
                 month: this.state.month,
