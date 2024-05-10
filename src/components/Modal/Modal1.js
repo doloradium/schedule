@@ -48,7 +48,18 @@ export class Modal1 extends React.Component {
 
     handleSubmit(e) {
         let parsedData = JSON.parse(localStorage.getItem('eventList'))
-        if (this.state.changes == true && (this.state.subject != '' || this.state.lecturer != '' || this.state.classroom != '')) {
+        parsedData.forEach((item) => {
+            if (item.slot == this.state.slot) {
+                item.year = this.state.year
+                item.month = this.state.month
+                item.day = this.state.day
+                item.slot = this.state.slot
+                item.subject = this.state.subject
+                item.lecturer = this.state.lecturer
+                item.classroom = this.state.classroom
+                item.color = ''
+            } else {
+                 if (this.state.changes == true && (this.state.subject != '' || this.state.lecturer != '' || this.state.classroom != '')) {
             parsedData.push({
                 year: this.state.year,
                 month: this.state.month,
@@ -71,6 +82,8 @@ export class Modal1 extends React.Component {
                 color: ''
             }
         }
+            }
+        })
         localStorage.setItem('eventList', JSON.stringify(parsedData))
         document.querySelector('#modal1').style.display = 'none'
         document.querySelector('#modal1').firstChild.style.display = 'none'
