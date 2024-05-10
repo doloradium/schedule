@@ -49,15 +49,17 @@ export class Modal1 extends React.Component {
     handleSubmit(e) {
         let parsedData = JSON.parse(localStorage.getItem('eventList'))
         parsedData.forEach((item) => {
-            if (item.slot == this.state.slot) {
-                item.year = this.state.year
-                item.month = this.state.month
-                item.day = this.state.day
-                item.slot = this.state.slot
-                item.subject = this.state.subject
-                item.lecturer = this.state.lecturer
-                item.classroom = this.state.classroom
-                item.color = ''
+            if (item.slot == this.state.slot && item.year == this.state.year && item.month == this.state.month && item.day == this.state.day) {
+                item = {    
+                    year: this.state.year,
+                    month: this.state.month,
+                    day: this.state.day,
+                    slot: this.state.slot,
+                    subject: this.state.subject,
+                    lecturer: this.state.lecturer,
+                    classroom: this.state.classroom,
+                    color: ''
+                }
             } else {
                  if (this.state.changes == true && (this.state.subject != '' || this.state.lecturer != '' || this.state.classroom != '')) {
             parsedData.push({
